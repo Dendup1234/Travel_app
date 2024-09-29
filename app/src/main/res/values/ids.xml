@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="search_city" type="id" />
+    <item name="menu_icon" type="id" />
+    <item name="thimphu" type="id" />
+    <item name="thimphu_name" type="id" />
+    <item name="paro" type="id" />
+    <item name="paro_name" type="id" />
+    <item name="punakha" type="id" />
+    <item name="punakha_name" type="id" />
+    <item name="haa" type="id" />
+    <item name="haa_name" type="id" />
+    <item name="recycler_view" type="id" />
+    <item name="know_more" type="id" />
+    <item name="view_on_map_button" type="id" />
+    <item name="search_button" type="id" />
+    <item name="city_description" type="id" />
+    <item name="weather_icon" type="id" />
+    <item name="weather_temperature" type="id" />
+    <item name="weather_humidity" type="id" />
+    <item name="weather_status" type="id" />
+    <item name="image_shopping_place" type="id" />
+    <item name="text_shopping_place" type="id" />
+    <item name="read_more" type="id" />
+</resources>

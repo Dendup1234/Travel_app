@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@drawable/gradient_background"
+    tools:context=".MainActivity">
+
+    <!-- Title TextView -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LET' S"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:textAlignment="textStart"
+        android:layout_marginBottom="16dp"
+        />
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EXPLORE"
+        android:textSize="39sp"
+        android:textColor="#3E3B3B"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Subtitle TextView -->
+    <TextView
+        android:id="@+id/textViewSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="THE WORLD"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Description TextView -->
+    <TextView
+        android:id="@+id/textViewdescribe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="The platform for offering people the chance to explore new places, cultures, and experiences"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:textColor="@color/light_gray"
+        android:gravity="center"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- Enter Button -->
+    <Button
+        android:id="@+id/buttonEnter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ENTER"
+        android:textSize="20sp"
+        android:backgroundTint="@color/cyan"
+        android:textColor="@android:color/white"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:elevation="4dp"
+        android:layout_marginTop="40dp"/>
+</LinearLayout>

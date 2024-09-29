@@ -1,0 +1,73 @@
+<!-- res/layout/dialog_filter_options.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select items to display in map"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"/>
+
+    <CheckBox
+        android:id="@+id/check_food"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food" />
+
+    <CheckBox
+        android:id="@+id/check_hangout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hangout Spots" />
+
+    <CheckBox
+        android:id="@+id/check_monuments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monuments" />
+
+    <CheckBox
+        android:id="@+id/check_bus_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bus Stop" />
+
+    <CheckBox
+        android:id="@+id/check_shopping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shopping" />
+
+    <CheckBox
+        android:id="@+id/check_petrol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Petrol" />
+
+    <CheckBox
+        android:id="@+id/check_atm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ATM" />
+
+    <CheckBox
+        android:id="@+id/check_hospital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hospital" />
+
+    <Button
+        android:id="@+id/btn_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SELECT"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_gravity="end"/>
+</LinearLayout>

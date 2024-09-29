@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F9F9"
+    tools:context=".DestinationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- AppBar / Top bar -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#03A9F4"
+            android:elevation="4dp"
+            android:padding="16dp">
+
+            <!-- Back icon -->
+            <ImageView
+                android:id="@+id/back_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_back"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="Back"
+                android:layout_marginEnd="16dp"
+                app:tint="#FFFFFF" />
+
+            <!-- City name -->
+            <TextView
+                android:id="@+id/city_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="City Name"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- Image of the City with rounded corners -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <ImageView
+                android:id="@+id/city_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img"
+                android:contentDescription="City Image" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- City description -->
+        <TextView
+            android:id="@+id/city_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Description of the city."
+            android:textSize="16sp"
+            android:textColor="#757575"
+            android:lineSpacingExtra="4dp" />
+
+        <!-- Weather Section -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:layout_margin="16dp"
+            android:elevation="2dp"
+            android:clipToPadding="false">
+
+            <!-- Weather Icon -->
+            <ImageView
+                android:id="@+id/weather_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/ic_weather"
+                android:layout_marginEnd="16dp" />
+
+            <!-- Temperature -->
+            <TextView
+                android:id="@+id/weather_temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/weather_icon"
+                android:layout_marginStart="16dp"
+                android:text="25.7°C"
+                android:textSize="18sp"
+                android:textColor="#000" />
+
+            <!-- Humidity and weather status -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentEnd="true"
+                android:gravity="end"
+                android:layout_marginStart="8dp">
+
+                <TextView
+                    android:id="@+id/weather_humidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Humidity: 93%"
+                    android:textColor="#757575"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:id="@+id/weather_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Clear sky"
+                    android:textColor="#757575" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- Grid Layout for Cards (3 rows and 2 columns) -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="3"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <!-- Fun Facts Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_fun_facts"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/ic_fun_facts"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:src="@drawable/ic_fun_facts"
+                        android:background="#7C7070"
+                        android:layout_marginEnd="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/ic_fun_facts"
+                        android:layout_marginStart="16dp"
+                        android:text="Fun Facts"
+                        android:textSize="16sp"
+                        android:textColor="#000" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Hangout Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_hangout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/ic_hangout"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:src="@drawable/ic_hangout"
+                        android:background="#7C7070"
+                        android:layout_marginEnd="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/ic_hangout"
+                        android:layout_marginStart="16dp"
+                        android:text="Hangout"
+                        android:textSize="16sp"
+                        android:textColor="#000" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Shopping Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_shopping"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/ic_shopping"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:src="@drawable/ic_shopping"
+                        android:background="#7C7070"
+                        android:layout_marginEnd="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/ic_shopping"
+                        android:layout_marginStart="16dp"
+                        android:text="Shopping"
+                        android:textSize="16sp"
+                        android:textColor="#000" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Famous Places Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_famous_places"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/ic_famous_places"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:src="@drawable/ic_places"
+                        android:background="#7C7070"
+                        android:layout_marginEnd="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/ic_famous_places"
+                        android:layout_marginStart="16dp"
+                        android:text="Famous Places"
+                        android:textSize="16sp"
+                        android:textColor="#000" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Monuments Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_monuments"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/ic_monuments"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:src="@drawable/ic_monuments"
+                        android:background="#7C7070"
+                        android:layout_marginEnd="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/ic_monuments"
+                        android:layout_marginStart="16dp"
+                        android:text="Monuments"
+                        android:textSize="16sp"
+                        android:textColor="#000" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Restaurants Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_restaurants"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/ic_restaurants"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:src="@drawable/ic_resturants"
+                        android:background="#7C7070"
+                        android:layout_marginEnd="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/ic_restaurants"
+                        android:layout_marginStart="16dp"
+                        android:text="Restaurants"
+                        android:textSize="16sp"
+                        android:textColor="#000" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </GridLayout>
+    </LinearLayout>
+</ScrollView>

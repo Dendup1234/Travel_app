@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F4F6F7"
+    tools:context=".HomeActivity">
+
+    <!-- Top bar with menu and title -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1976D2"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/menu_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_menu"
+            android:contentDescription="Menu Icon"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Travel App"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- Search bar with button -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/search_bar_background"
+        android:padding="8dp">
+
+        <EditText
+            android:id="@+id/search_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search a city"
+            android:textColor="@android:color/black"
+            android:padding="10dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginStart="2dp"
+            android:background="#E0E0E0"
+            android:drawablePadding="10dp" />
+
+        <ImageView
+            android:id="@+id/search_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:src="@drawable/ic_search"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Search Button"
+            app:tint="#1976D2" />
+    </RelativeLayout>
+
+    <!-- Section title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:text="Most Popular Cities"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Horizontal scroll with city images -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Thimphu image and name -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginEnd="16dp">
+
+                <ImageView
+                    android:id="@+id/thimphu"
+                    android:layout_width="180dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/img"
+                    android:contentDescription="Thimphu"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="4dp"
+                    android:elevation="4dp"
+                    android:background="@drawable/card_background" />
+
+                <TextView
+                    android:id="@+id/thimphu_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thimphu"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- Paro image and name -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginEnd="16dp">
+
+                <ImageView
+                    android:id="@+id/paro"
+                    android:layout_width="180dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/img_1"
+                    android:contentDescription="Paro"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="4dp"
+                    android:elevation="4dp"
+                    android:background="@drawable/card_background" />
+
+                <TextView
+                    android:id="@+id/paro_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Paro"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- Punakha image and name -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginEnd="16dp">
+
+                <ImageView
+                    android:id="@+id/punakha"
+                    android:layout_width="180dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/img_2"
+                    android:contentDescription="Punakha"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="4dp"
+                    android:elevation="4dp"
+                    android:background="@drawable/card_background" />
+
+                <TextView
+                    android:id="@+id/punakha_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Punakha"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- Haa image and name -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/haa"
+                    android:layout_width="180dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/img_3"
+                    android:contentDescription="Haa"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="4dp"
+                    android:elevation="4dp"
+                    android:background="@drawable/card_background" />
+
+                <TextView
+                    android:id="@+id/haa_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Haa"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp">
+
+        <!-- ImageView for displaying the city image -->
+        <ImageView
+            android:id="@+id/city_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/city_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+
+        <!-- RecyclerView for displaying city list -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- LinearLayout for buttons placed in the center of the RelativeLayout -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/know_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_background"
+                android:text="Know More"
+                android:textColor="#FFFFFF"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp" />
+
+            <Button
+                android:id="@+id/view_on_map_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View on Map"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/button_background"
+                android:layout_marginStart="8dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
